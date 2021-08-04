@@ -1,0 +1,578 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "second process",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "Registration",
+          "slots": [
+            {
+              "name": "First_Name",
+              "type": "AMAZON.FirstName",
+              "samples": [
+                "my first name is {First_Name}",
+                "{First_Name}"
+              ]
+            },
+            {
+              "name": "Last_Name",
+              "type": "AMAZON.FirstName",
+              "samples": [
+                "my last name is {Last_Name}",
+                "{Last_Name}"
+              ]
+            },
+            {
+              "name": "Gender",
+              "type": "AMAZON.FirstName",
+              "samples": [
+                "my gender is {Gender}",
+                "{Gender}"
+              ]
+            },
+            {
+              "name": "Mobile_No",
+              "type": "AMAZON.PhoneNumber",
+              "samples": [
+                "{Mobile_No}",
+                "my mobile number is {Mobile_No}"
+              ]
+            },
+            {
+              "name": "profession",
+              "type": "AMAZON.FirstName",
+              "samples": [
+                "i am {profession}",
+                "{profession}"
+              ]
+            }
+          ],
+          "samples": [
+            "register",
+            "new account",
+            "create my account",
+            "sign up"
+          ]
+        },
+        {
+          "name": "Login",
+          "slots": [
+            {
+              "name": "LoginID",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{LoginID}"
+              ]
+            },
+            {
+              "name": "password",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{password}"
+              ]
+            },
+            {
+              "name": "profession",
+              "type": "AMAZON.FirstName",
+              "samples": [
+                "i am {profession}",
+                "{profession}"
+              ]
+            }
+          ],
+          "samples": [
+            "Login my reward system",
+            "Login"
+          ]
+        },
+        {
+          "name": "MyRollNo",
+          "slots": [],
+          "samples": [
+            "roll no",
+            "my roll no",
+            "What is my roll no"
+          ]
+        },
+        {
+          "name": "ViewMyPoint",
+          "slots": [],
+          "samples": [
+            "point",
+            "my point"
+          ]
+        },
+        {
+          "name": "TeacherPointIncrement",
+          "slots": [],
+          "samples": [
+            "thank you so much",
+            "thanks for explaining",
+            "thank you"
+          ]
+        },
+        {
+          "name": "StudentPointIncrement",
+          "slots": [
+            {
+              "name": "RollNo",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "give point to {RollNo} ",
+            "excellend {RollNo}",
+            "nice {RollNo}",
+            "good {RollNo}"
+          ]
+        },
+        {
+          "name": "Profile",
+          "slots": [],
+          "samples": [
+            "profile",
+            "my profile",
+            "details"
+          ]
+        },
+        {
+          "name": "Logout",
+          "slots": [],
+          "samples": [
+            "logout"
+          ]
+        },
+        {
+          "name": "ViewOtherPoint",
+          "slots": [
+            {
+              "name": "profession",
+              "type": "AMAZON.FirstName",
+              "samples": [
+                "{profession}"
+              ]
+            },
+            {
+              "name": "MobileNo",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{MobileNo}"
+              ]
+            }
+          ],
+          "samples": [
+            "other person point",
+            "please tell me other the point of other person"
+          ]
+        }
+      ],
+      "types": []
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "Registration",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "First_Name",
+              "type": "AMAZON.FirstName",
+              "elicitationRequired": true,
+              "confirmationRequired": true,
+              "prompts": {
+                "confirmation": "Confirm.Slot.1599741277031.597635038573",
+                "elicitation": "Elicit.Slot.1599741277031.597635038573"
+              }
+            },
+            {
+              "name": "Last_Name",
+              "type": "AMAZON.FirstName",
+              "elicitationRequired": true,
+              "confirmationRequired": true,
+              "prompts": {
+                "confirmation": "Confirm.Slot.1599741277031.1516307635823",
+                "elicitation": "Elicit.Slot.1599741277031.1516307635823"
+              }
+            },
+            {
+              "name": "Gender",
+              "type": "AMAZON.FirstName",
+              "elicitationRequired": true,
+              "confirmationRequired": true,
+              "prompts": {
+                "confirmation": "Confirm.Slot.1599741277031.1507717193669",
+                "elicitation": "Elicit.Slot.1599741277031.1507717193669"
+              }
+            },
+            {
+              "name": "Mobile_No",
+              "type": "AMAZON.PhoneNumber",
+              "elicitationRequired": true,
+              "confirmationRequired": true,
+              "prompts": {
+                "confirmation": "Confirm.Slot.1599741277031.585955755687",
+                "elicitation": "Elicit.Slot.1599741277031.585955755687"
+              }
+            },
+            {
+              "name": "profession",
+              "type": "AMAZON.FirstName",
+              "elicitationRequired": true,
+              "confirmationRequired": true,
+              "prompts": {
+                "confirmation": "Confirm.Slot.1511633811440.280972134167",
+                "elicitation": "Elicit.Slot.1511633811440.280972134167"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Login",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "LoginID",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": true,
+              "prompts": {
+                "confirmation": "Confirm.Slot.1548313507911.193728504355",
+                "elicitation": "Elicit.Slot.1548313507911.193728504355"
+              }
+            },
+            {
+              "name": "password",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1548313507911.233022317498"
+              }
+            },
+            {
+              "name": "profession",
+              "type": "AMAZON.FirstName",
+              "elicitationRequired": true,
+              "confirmationRequired": true,
+              "prompts": {
+                "confirmation": "Confirm.Slot.506587475818.1350223481743",
+                "elicitation": "Elicit.Slot.506587475818.1350223481743"
+              }
+            }
+          ]
+        },
+        {
+          "name": "TeacherPointIncrement",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": []
+        },
+        {
+          "name": "ViewOtherPoint",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "profession",
+              "type": "AMAZON.FirstName",
+              "elicitationRequired": true,
+              "confirmationRequired": true,
+              "prompts": {
+                "confirmation": "Confirm.Slot.1411318593689.272939906222",
+                "elicitation": "Elicit.Slot.1411318593689.272939906222"
+              }
+            },
+            {
+              "name": "MobileNo",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": true,
+              "prompts": {
+                "confirmation": "Confirm.Slot.1411318593689.672749723954",
+                "elicitation": "Elicit.Slot.1411318593689.672749723954"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.1599741277031.585955755687",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "please tell me your ten digit mobile number"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.1599741277031.585955755687",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Thank you i\u0027m confirming once more Is your mobile number {Mobile_No}"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1599741277031.1507717193669",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "please tell me your gender"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.1599741277031.1507717193669",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Thank you i\u0027m confirming once more Is your gender  {Gender}"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1599741277031.1516307635823",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "please tell me your last name"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.1599741277031.1516307635823",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Thank you i\u0027m confirming once more Is your last name {Last_Name}"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1599741277031.597635038573",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "please tell me your first name"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.1599741277031.597635038573",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Thank you i\u0027m confirming once more Is your first name {First_Name}"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.107285601773",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "You are all set. Say confirm now to register your reward system account"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.330162669479",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "You are all set. Say confirm now to register your Reward system account"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1507574492364.1519903126374",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Yeah sure, I can do that for you.Can you tell me your login id without the letter REW"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1507574492364.921759151617",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Can you please tell me your password"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.1507574492364.921759151617",
+        "variations": [
+          {
+            "type": "SSML",
+            "value": "\u003cspeak\u003eOkay i\u0027m confirming. is your password is \u003csay-as interpret-as \u003d\u0027digits\u0027\u003e {password} \u003c/say-as\u003e\u003c/speak\u003e"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.293466028586.1092879319899",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "please confirm your login id is REW {loginID}"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.204392810575.887233528492",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "please tell me are you teacher or student?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.204392810575.887233528492",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Thank you i\u0027m confirming once more Is your profession {profession}"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.439012420351.916219000276",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "what would you like to do"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1511633811440.280972134167",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "tell me your profession"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.1511633811440.280972134167",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "i am confirm that your profession {profession}"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1548313507911.193728504355",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Enter your login ID without REW"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.1548313507911.193728504355",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Thank you i\u0027m confirming your LoginID is REW{LoginID}"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1548313507911.233022317498",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "enter your password"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.506587475818.1350223481743",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "please tell me your profession"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.506587475818.1350223481743",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "thank you i am confirming your profession {profession}"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.1411318593689.272939906222",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "thank you i\u0027m confirming profession {profession}"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.1411318593689.672749723954",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "thank you i\u0027m confirming first name {MobileNo}"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1411318593689.272939906222",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "please tell me the profession of the other person"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1411318593689.672749723954",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "please tell me the Mobile number of the other person"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "32"
+}
